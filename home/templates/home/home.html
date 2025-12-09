@@ -190,6 +190,13 @@
   {% csrf_token %}
   <div class="row d-flex justify-content-center">
     <h3 class="text-center pt-5 mb-3 text-primary">Join Our Waiting List!</h3>
+    {% if waitlist_success %}
+    <div class="col-md-8">
+      <div class="alert alert-success rounded1 text-center">
+        You're on the list! We'll be in touch as soon as HabitEarn launches.
+      </div>
+    </div>
+    {% endif %}
     <div class="col-md-6"> 
       <div class="form-floating my-2">
         <input class="form-control bg-light rounded1" placeholder="Your Name" type="text" name="name" maxlength="255" id="id_name">

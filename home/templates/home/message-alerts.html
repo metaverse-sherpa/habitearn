@@ -2,12 +2,12 @@
 <div class="container">
   {% if messages %}
   {% for message in messages %}
-  <div class="row d-flex justify-content-center mt-2">
+  <div class="row d-flex justify-content-center mt-2 floating-alert-row">
     <div class="col-md-7 alert alert-important {% if message.tags == 'error' %}
         alert-danger
       {% elif message.tags %}
         alert-{{ message.tags }}
-      {% endif %} alert-dismissible mb-0 fade show text-white"
+      {% endif %} alert-dismissible mb-0 fade show text-white floating-alert"
       role="alert" data-delay="5500">
       <div class="d-flex">
         <div>
@@ -38,3 +38,24 @@
     }, 0);
   }
 </script>
+<style>
+  .floating-alert-row {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    pointer-events: none;
+  }
+
+  .floating-alert {
+    pointer-events: auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .floating-alert.alert-success {
+    background-color: #2fbd82;
+    color: #ffffff;
+    border-color: #24a16c;
+  }
+</style>

@@ -1,0 +1,422 @@
+/********** Template CSS **********/
+:root {
+    --primary: #2EB872;
+    --light: #F3F4F5;
+    --dark: #282F34;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*** Img Border ***/
+.img-border {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+
+.img-border::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 3rem;
+    bottom: 3rem;
+    border: 5px solid var(--primary);
+}
+
+.img-border img {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    object-fit: cover;
+}
+
+
+
+
+/*** Footer ***/
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}
+
+
+
+
+.hero .hero-waves {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+  
+  .hero .wave1 use {
+    animation: move-forever1 10s linear infinite;
+    animation-delay: -2s;
+    fill: #2EB872;
+    opacity:1;
+  }
+  
+  .hero .wave2 use {
+    animation: move-forever2 8s linear infinite;
+    animation-delay: -2s;
+    fill:#ff8800;
+    opacity: 1;
+  }
+  
+  .hero .wave3 use {
+    animation: move-forever3 6s linear infinite;
+    animation-delay: -2s;
+    fill: #fff;
+  }
+  
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+  
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+  
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+  
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  .header_section {
+    width: 100%;
+    float: left;
+    background-image: url(../img/bg.png);
+    height: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.bg-blue{
+    background-color: #e7fff3;
+}
+.bg-orange-light{
+    background-color: #ff880094;
+}
+.text-blue{
+    color: #00c3ff;
+}
+.text-orange{
+    color: #ff8800;
+}
+.text-gray{
+    color: #4a4a4a;
+}
+.text-graylight{
+    color: #7b7b7b;
+}
+.btn-orange{
+    background-color: #ff8800;
+    border-radius: 2rem;
+    color: white;
+}
+.mb-5-minus{
+    margin-top: -2rem;
+}
+.rounded1{
+    border-radius: 2rem;
+
+}
+
+.animated-bg {
+    position: relative;
+    bottom: 30%;
+    left: 20%;
+    width: 150%;
+    height: auto;
+    opacity: 0.5;
+    transform-origin: center;
+    animation: rotateAndMove 10s infinite linear;
+  }
+
+  .animated-bg2 {
+    position: relative;
+    bottom: 30%;
+    left: 70%;
+    width: 150%;
+    height: auto;
+    opacity: 0.5;
+    transform-origin: center;
+    animation: rotateAndMove2 10s infinite linear;
+  }
+
+  @keyframes rotateAndMove {
+    0% {
+        transform: translate(-50%, -10%) rotate(0deg);
+      }
+      20% {
+        transform: translate(-25%, -60%) rotate(90deg);
+      }
+      40% {
+        transform: translate(-40%, -20%) rotate(180deg);
+      }
+      60% {
+        transform: translate(-15%, -40%) rotate(270deg);
+      }
+      80% {
+        transform: translate(-40%, -45%) rotate(360deg);
+      }
+      100% {
+        transform: translate(-50%, -10%) rotate(0deg);
+      }
+    
+  }
+  @keyframes rotateAndMove2 {
+    0% {
+        transform: translate(-10%, -50%) rotate(0deg);
+      }
+      20% {
+        transform: translate(-20%, -10%) rotate(90deg);
+      }
+      40% {
+        transform: translate(-40%, -20%) rotate(180deg);
+      }
+      60% {
+        transform: translate(-15%, -40%) rotate(270deg);
+      }
+      80% {
+        transform: translate(-40%, -45%) rotate(-180deg);
+      }
+      100% {
+        transform: translate(-10%, -50%) rotate(0deg);
+      }
+    
+  }
+  .img-resize1{
+    height:160px;
+    width: auto;
+  }
+  .animated-atom{
+    z-index: 1000;
+    position: relative;
+    right: 0;
+    animation: atomic 5s ease-in-out forwards infinite, shake 0.7s infinite;
+    height:200px;
+    width: auto;
+  }
+  @media (max-width: 991.98px) {
+    .animated-atom  {
+      animation: atomics 5s ease-in-out forwards infinite, shake 0.7s infinite;
+      height:100px;
+      width: auto;
+    }}
+    @keyframes atomics {
+      0% { top: 0; left: 0; transform: translate(0, 0) scale(1); }
+      25% { top: 0px; left: 100px; transform: translate(100px, 50px) scale(1.2); }
+      50% { top: 0px; left: 50px; transform: translate(50px, 200px) scale(0.8); }
+      75% { top: 0px; left: 200px; transform: translate(200px, 100px) scale(1.3); }
+      100% { top: 0; left: 0; transform: translate(0, 0) scale(1); }
+  }
+  @keyframes atomic {
+    0% { top: 0; left: 0; transform: translate(0, 0) scale(1); }
+    25% { top: 50px; left: 100px; transform: translate(100px, 50px) scale(1.2); }
+    50% { top: 200px; left: 50px; transform: translate(50px, 200px) scale(0.8); }
+    75% { top: 100px; left: 200px; transform: translate(200px, 100px) scale(1.3); }
+    100% { top: 0; left: 0; transform: translate(0, 0) scale(1); }
+}
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.animated-bg-atom{
+    animation: bgatom 10s infinite linear;
+    opacity: 0.2;
+}
+  @keyframes bgatom {
+    0% {
+        transform:rotate(0deg);
+      }
+      20% {
+        transform: rotate(90deg);
+      }
+      40% {
+        transform: rotate(180deg);
+      }
+      60% {
+        transform:  rotate(270deg);
+      }
+      80% {
+        transform: rotate(-180deg);
+      }
+      100% {
+        transform:  rotate(0deg);
+      }
+    
+  }
+  .animated-bg-atom, .animated-atom {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

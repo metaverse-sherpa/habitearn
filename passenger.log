@@ -78,16 +78,3 @@ App 143506 output: [ pid=143506, time=2025-12-09 07:27:08,033 ]: Not Found: /sw.
 App 267769 output: tput: No value for $TERM and no -T specified
 App 267769 output: Not Found: /wp-admin/setup-config.php
 App 267769 output: [ pid=267769, time=2025-12-09 07:46:29,952 ]: Not Found: /wp-admin/setup-config.php
-App 317520 output: tput: No value for $TERM and no -T specified
-App 317520 output: Not Found: /robots.txt
-App 317520 output: [ pid=317520, time=2025-12-09 08:24:35,898 ]: Not Found: /robots.txt
-App 331553 output: tput: No value for $TERM and no -T specified
-App 331553 output: Not Found: /sw.js
-App 331553 output: [ pid=331553, time=2025-12-09 08:33:47,258 ]: Not Found: /sw.js
-App 331553 output: Not Found: /sw.js
-App 331553 output: [ pid=331553, time=2025-12-09 08:34:17,043 ]: Not Found: /sw.js
-App 369652 output: tput: No value for $TERM and no -T specified
-App 369652 output: Not Found: /sw.js
-App 369652 output: [ pid=369652, time=2025-12-09 08:48:43,511 ]: Not Found: /sw.js
-App 369652 output: Not Found: /sw.js
-App 369652 output: [ pid=369652, time=2025-12-09 08:49:13,286 ]: Not Found: /sw.js

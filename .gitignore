@@ -10,3 +10,4 @@ contact_us/__pycache__
 contact_us/__pycache__/models.cpython-311.pyc
 _base/__pycache__/settings.cpython-311.pyc
 .venv
+__pycache__/passenger_wsgi.cpython-311.pyc
